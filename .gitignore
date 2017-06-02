@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+data/ADNI1/images/
+
 # C extensions
 *.so
 
