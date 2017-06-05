@@ -5,6 +5,9 @@ __pycache__/
 
 data/ADNI1/images/
 
+
+.idea
+
 # C extensions
 *.so
 
