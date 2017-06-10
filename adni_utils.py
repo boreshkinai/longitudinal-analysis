@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 ADNI_DATA_DIR = 'data/ADNI1/'
@@ -29,8 +30,16 @@ def get_visit_num_to_code():
 
 def dxcurren_num_to_label():
     '''Transform current diagnosis from number to label. this is based on DATADIC.csv'''
-    return {1:'NL', 2:'MCI',3:'AD'}
+    dic = {1:'NL', 2:'MCI', 3:'AD', np.NaN: 'NAN'}
+    def func(num):
+        return dic[num]
+
+    return func
 
 def dxcurren_label_to_num():
     '''Transform current diagnosis from label to number. this is based on DATADIC.csv'''
-    return {'NL':1, 'MCI':2,'AD':3}
+    dic = {'NL':1, 'MCI':2,'AD':3, 'NAN':np.NaN}
+    def func(label):
+        return dic[label]
+
+    return func
