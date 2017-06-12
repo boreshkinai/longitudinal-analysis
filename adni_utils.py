@@ -33,7 +33,6 @@ def dxcurren_num_to_label():
     dic = {1:'NL', 2:'MCI', 3:'AD', np.NaN: 'NAN'}
     def func(num):
         return dic[num]
-
     return func
 
 def dxcurren_label_to_num():
@@ -41,5 +40,5 @@ def dxcurren_label_to_num():
     dic = {'NL':1, 'MCI':2,'AD':3, 'NAN':np.NaN}
     def func(label):
         return dic[label]
-
     return func
+
